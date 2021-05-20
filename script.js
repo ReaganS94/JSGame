@@ -22,29 +22,14 @@ document.querySelector(".check").addEventListener("click", function () {
     document.querySelector(".counter").textContent = counter;
     if (score > highscore) {
       highscore = score;
-      document.querySelector(".highscore").textContent = score;
+      document.querySelector(".highscore").textContent = highscore;
     }
-  } else if (number > secretNumber) {
+  } else if (number !== secretNumber) {
     if (score > 1) {
+      document.querySelector(".guess").textContent =
+        number > secretNumber ? "NEIN! Too high." : "NEIN! Too low.";
       score--;
       document.querySelector(".score").textContent = score;
-      document.querySelector(".guess").textContent = "NEIN! Too high.";
-    } else {
-      document.querySelector(".guess").textContent = "Ugh. Just... just go.";
-      document.querySelector(".score").textContent = 0;
-      document.querySelector("body").style.backgroundColor = "#990000";
-      document.querySelector(".counter").textContent = 0;
-    }
-  } else if (number < secretNumber) {
-    if (score > 1) {
-      score--;
-      document.querySelector(".score").textContent = score;
-      document.querySelector(".guess").textContent = "NEIN! Too low.";
-    } else {
-      document.querySelector(".guess").textContent = "Ugh. Just... just go.";
-      document.querySelector(".score").textContent = 0;
-      document.querySelector("body").style.backgroundColor = "#990000";
-      document.querySelector(".counter").textContent = 0;
     }
   }
 });
