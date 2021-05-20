@@ -4,7 +4,13 @@ let score = 20;
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let highscore = 0;
 let counter = 0;
-document.querySelector(".score").textContent = score;
+const changeText = function (message) {
+  document.querySelector(".guess").textContent = message;
+};
+const changeScore = function (currentScore) {
+  document.querySelector(".score").textContent = currentScore;
+};
+changeScore(score);
 
 document.querySelector(".check").addEventListener("click", function () {
   let number = Number(document.querySelector(".inpNum").value);
@@ -14,8 +20,7 @@ document.querySelector(".check").addEventListener("click", function () {
       ".guess"
     ).textContent = `This ain't no number. You think I'm stoopid?`;
   } else if (number === secretNumber) {
-    document.querySelector(".guess").textContent =
-      "Winner winner chicken dinner";
+    changeText("Winner winner chicken dinner");
     document.querySelector(".number").textContent = secretNumber;
     document.querySelector("body").style.backgroundColor = "#009900";
     counter++;
@@ -26,10 +31,9 @@ document.querySelector(".check").addEventListener("click", function () {
     }
   } else if (number !== secretNumber) {
     if (score > 1) {
-      document.querySelector(".guess").textContent =
-        number > secretNumber ? "NEIN! Too high." : "NEIN! Too low.";
+      changeText(number > secretNumber ? "NEIN! Too high." : "NEIN! Too low.");
       score--;
-      document.querySelector(".score").textContent = score;
+      changeScore(score);
     }
   }
 });
@@ -39,6 +43,6 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").textContent = "?";
   document.querySelector(".guess").textContent = "Start Guessing...";
-  document.querySelector(".score").textContent = 20;
+  changeScore(20);
   document.querySelector(".inpNum").value = "";
 });
