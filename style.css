@@ -1,0 +1,124 @@
+/* ------GENERAL------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: "Press Start 2P", cursive;
+}
+
+/* ---END---GENERAL---END--- */
+
+/* ------TOP HALF------ */
+
+header {
+  height: 45vh;
+  position: relative;
+  border-bottom: 7px solid #eee;
+}
+
+h1 {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; */
+  font-size: 5rem;
+  position: absolute;
+  right: 8%;
+  top: 30%;
+  transform: translate(-50%);
+}
+
+.counterLabel {
+  float: right;
+  margin-top: 1rem;
+  margin-right: 1rem;
+  font-size: 2rem;
+}
+
+.number {
+  position: absolute;
+  left: 46%;
+  bottom: 0;
+  text-align: center;
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 15rem;
+  padding: 3rem 0;
+}
+
+/* ---END---TOP HALF---END--- */
+
+/* ------BOTTOM HALF------ */
+
+main {
+  height: 55vh;
+}
+
+.left {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  position: relative;
+  height: 100%;
+}
+
+.right {
+  float: right;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 40%;
+  position: relative;
+  height: 100%;
+  font-size: 3rem;
+}
+
+.guess {
+  margin-bottom: 5rem;
+}
+
+.labelHighscore {
+  margin-top: 5rem;
+}
+
+/* ---END---BOTTOM HALF---END--- */
+
+/* ------BUTTONS------ */
+
+.btn {
+  padding: 1rem 2rem;
+  font-family: "Press Start 2P", cursive;
+}
+
+input {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 4.5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: block;
+  margin: 3rem;
+}
+
+/* ---END---BUTTONS---END--- */

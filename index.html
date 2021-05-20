@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Game</title>
+    <style>
+      /* Chrome, Safari, Edge, Opera */
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p class="counterLabel">Win Counter: <span class="counter">0</span></p>
+      <h1>Guess My Number</h1>
+      <p class="number">?</p>
+    </header>
+    <main>
+      <section class="left">
+        <button type="button" class="btn again">Again!</button>
+        <input
+          type="number"
+          inputmode="numeric"
+          placeholder="1-20"
+          class="inpNum"
+        />
+        <button type="button" class="btn check">Check!</button>
+      </section>
+      <section class="right">
+        <p class="guess">Start Guessing...</p>
+        <p class="labelScore">Score:<span class="score">0</span></p>
+        <p class="labelHighscore">Highscore:<span class="highscore">0</span></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
